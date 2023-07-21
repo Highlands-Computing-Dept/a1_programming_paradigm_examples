@@ -1,0 +1,119 @@
+:root {
+  --amber-100: #fef3c7;
+  --amber-900: #78350f;
+  --sky-50: #f0f9ff;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+  --sky-900: #0c4a6e;
+  --slate-900: #0f172a;
+  --slate-500: #64748b;
+  --slate-300: #cbd5e1;
+  --white: #ffffff;
+}
+:focus {
+  outline: none;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--slate-900);
+  box-sizing: border-box;
+}
+
+label {
+  diplay: block;
+  font-size: 0.75rem;
+  color: var(--slate-500);
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--sky-900);
+  margin: 2rem;
+  text-align: center;
+}
+
+input {
+  box-sizing: border-box;
+  color: var(--sky-900);
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  margin-top: 2px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--slate-300);
+}
+input ~ .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--sky-600);
+}
+input:focus ~ .border {
+  width: 100%;
+  transition: 0.5s;
+}
+
+button {
+  background-color: var(--sky-600);
+  border: 0;
+  color: var(--sky-50);
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: var(--sky-900) 4px 4px 0px;
+  border-radius: 8px;
+  transition: transform 200ms, box-shadow 200ms;
+}
+button:focus {
+  background-color: var(--sky-500);
+}
+button:active {
+  transform: translate(4px) translate(4px);
+  background-color: var(--sky-600);
+  box-shadow: var(--sky-900) 0px 0px 0px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.form {
+  width: 100%;
+}
+
+.form-field {
+  max-width: 500px;
+  margin: 1rem auto;
+  position: relative;
+}
+
+#area {
+  background: var(--sky-50);
+  color: var(--sky-600);
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    width: 50%;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form {
+    width: 50%;
+  }
+}
